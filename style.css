@@ -1,0 +1,424 @@
+
+/* ===== STYLE GENERAL ===== */
+:root {
+  --noir: #171715;
+  --creme: #f6f2ea;
+  --blanc: #ffffff;
+  --or: #c5a46d;
+  --gris: #77766f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--creme);
+  color: var(--noir);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* ===== EN-TETE ===== */
+.header {
+  min-height: 82px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: var(--creme);
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.logo span {
+  display: block;
+  color: var(--or);
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+
+.navigation {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+}
+
+.navigation a,
+.lien-secondaire {
+  transition: color 0.2s ease;
+}
+
+.navigation a:hover,
+.lien-secondaire:hover {
+  color: #a47b3f;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 14px 23px;
+  background: var(--noir);
+  color: var(--blanc);
+  border: 1px solid var(--noir);
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.bouton:hover {
+  background: var(--or);
+  border-color: var(--or);
+  color: var(--noir);
+}
+
+/* ===== ACCUEIL ===== */
+.hero {
+  min-height: 570px;
+  padding: 65px 7%;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+  background: var(--creme);
+}
+
+.surtitre {
+  margin-bottom: 18px;
+  color: #9c7a48;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  max-width: 580px;
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 5vw, 67px);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  color: #a88751;
+  font-style: italic;
+}
+
+.description {
+  max-width: 430px;
+  margin-top: 24px;
+  color: var(--gris);
+  font-size: 15px;
+}
+
+.hero-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+}
+
+.lien-secondaire {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.note {
+  margin-top: 38px;
+  color: var(--gris);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.hero-image {
+  position: relative;
+  min-width: 0;
+}
+
+.hero-image > img {
+  height: 440px;
+  object-fit: cover;
+}
+
+.image-etiquette {
+  position: absolute;
+  right: -18px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 23px;
+  background: var(--blanc);
+}
+
+.image-etiquette > span {
+  color: var(--or);
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+.image-etiquette strong {
+  font-size: 12px;
+}
+
+.image-etiquette p {
+  color: var(--gris);
+  font-size: 11px;
+}
+
+/* ===== SERVICES ===== */
+.section {
+  padding: 95px 7%;
+}
+
+.services {
+  background: var(--blanc);
+}
+
+.section-titre {
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.section-titre h2,
+.apropos h2,
+.contact h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.section-titre > p:last-child {
+  margin-top: 12px;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.services-grille {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.carte-service {
+  padding: 32px 27px;
+  border: 1px solid #e7e1d7;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.carte-service:hover {
+  transform: translateY(-5px);
+  border-color: var(--or);
+}
+
+.numero {
+  color: #a88751;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.carte-service h3 {
+  margin-top: 24px;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: normal;
+}
+
+.carte-service p {
+  min-height: 70px;
+  margin-top: 12px;
+  color: var(--gris);
+  font-size: 13px;
+}
+
+.prix {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e7e1d7;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mention {
+  margin-top: 25px;
+  color: var(--gris);
+  font-size: 11px;
+}
+
+/* ===== PRESENTATION DU SALON ===== */
+.apropos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.apropos-image img {
+  height: 420px;
+}
+
+.apropos-texte > p:not(.surtitre) {
+  margin: 23px 0;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: var(--noir);
+  color: var(--blanc);
+  text-align: center;
+}
+
+.contact h2 {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.contact > p:not(.surtitre) {
+  margin: 18px 0 27px;
+  color: #c3c0b8;
+  font-size: 14px;
+}
+
+.contact .bouton {
+  background: var(--or);
+  color: var(--noir);
+  border-color: var(--or);
+}
+
+.contact .bouton:hover {
+  background: var(--blanc);
+  border-color: var(--blanc);
+}
+
+.contact .mention {
+  margin-top: 20px;
+  font-size: 11px;
+}
+
+/* ===== PIED DE PAGE ===== */
+.footer {
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer p,
+.footer > a:last-child {
+  color: var(--gris);
+  font-size: 11px;
+}
+
+/* ===== TELEPHONES ET TABLETTES ===== */
+@media (max-width: 900px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 30px;
+  }
+
+  .navigation {
+    gap: 15px;
+  }
+
+  .bouton-header {
+    display: none;
+  }
+
+  .apropos {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 18px 6%;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 45px 6%;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero h1 {
+    font-size: 47px;
+  }
+
+  .hero-image > img {
+    height: 340px;
+  }
+
+  .image-etiquette {
+    right: -5px;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .services-grille {
+    grid-template-columns: 1fr;
+  }
+
+  .carte-service p {
+    min-height: 0;
+  }
+
+  .apropos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .apropos-image img {
+    height: 300px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
